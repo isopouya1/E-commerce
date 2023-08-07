@@ -6,26 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="../dist/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Home</title>
 </head>
 
 <body>
-    <main class="container ">
+    <main class="container overflow-x-hidden">
         <header class="py-5 flex items-center justify-between">
-            <img class="w-40" src="../assets/Home/logo.svg" alt="">
-            <div class="flex flex-col items-center gap-y-[5px]">
+            <img class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
+            <button class="flex flex-col items-center gap-y-[5px]" id="overlayToggle" data-aos="fade-left">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+            </button>
+
+            <div id="overlayMenu"
+            class="container py-8 fade transition-all w-full hidden flex-col right-0 h-screen lg:hidden fixed top-0 z-50 bg-white  shadow-2xl"
+            >
+            <button class="flex flex-col items-center gap-y-[5px]" id="closeOverlayToggle">
+                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+            </button>
+
             </div>
         </header>
         <section class="flex flex-col items-center bg-gradient-to-l from-[#5B6FFF] to-primary w-full py-7 rounded-3xl">
-            <img src="../assets/Home/hero.png" alt="">
+            <img src="../assets/Home/hero.png" alt="" data-aos="fade">
             <div class="px-6 flex flex-col items-center gap-y-4">
-                <h1 class="text-white font-bold text-4xl text-center">All You Need
+                <h1 class="text-white font-bold text-4xl text-center" data-aos="fade-up">All You Need
                     For <span class="font-light">Designing!</span></h1>
-                <input type="search" placeholder="Search in Products" class="focus:outline-none py-3 px-3 rounded-2xl">
-                <h1 class="flex items-center text-white gap-x-1 text-xl">
+                <input data-aos="fade-down" type="search" placeholder="Search in Products" class="focus:outline-none py-3 px-3 rounded-2xl">
+                <h1 class="flex items-center text-white gap-x-1 text-xl" data-aos="fade">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M3.35288 15.0496L2.6227 15.2209L3.35288 15.0496ZM3.35288 8.95043L2.6227 8.77915L3.35288 8.95043ZM20.6471 8.95044L19.9169 9.12171L20.6471 8.95044ZM20.6471 15.0496L19.9169 14.8783L20.6471 15.0496ZM15.0496 20.6471L14.8783 19.9169L15.0496 20.6471ZM8.95044 20.6471L8.77916 21.3773L8.95044 20.6471ZM8.95043 3.35288L8.77916 2.6227L8.95043 3.35288ZM15.0496 3.35288L14.8783 4.08306L15.0496 3.35288ZM4.08306 14.8783C3.63898 12.9851 3.63898 11.0149 4.08306 9.12171L2.6227 8.77915C2.12577 10.8976 2.12577 13.1024 2.6227 15.2209L4.08306 14.8783ZM19.9169 9.12171C20.361 11.0149 20.361 12.9851 19.9169 14.8783L21.3773 15.2208C21.8742 13.1024 21.8742 10.8976 21.3773 8.77916L19.9169 9.12171ZM14.8783 19.9169C12.9851 20.361 11.0149 20.361 9.12171 19.9169L8.77916 21.3773C10.8976 21.8742 13.1024 21.8742 15.2208 21.3773L14.8783 19.9169ZM9.12171 4.08306C11.0149 3.63898 12.9851 3.63898 14.8783 4.08306L15.2208 2.6227C13.1024 2.12577 10.8976 2.12577 8.77916 2.6227L9.12171 4.08306ZM9.12171 19.9169C6.62161 19.3305 4.6695 17.3784 4.08306 14.8783L2.6227 15.2209C3.33924 18.2756 5.72441 20.6608 8.77916 21.3773L9.12171 19.9169ZM15.2208 21.3773C18.2756 20.6608 20.6608 18.2756 21.3773 15.2208L19.9169 14.8783C19.3305 17.3784 17.3784 19.3305 14.8783 19.9169L15.2208 21.3773ZM14.8783 4.08306C17.3784 4.6695 19.3305 6.62161 19.9169 9.12171L21.3773 8.77916C20.6608 5.72441 18.2756 3.33924 15.2208 2.6227L14.8783 4.08306ZM8.77916 2.6227C5.72441 3.33924 3.33924 5.72441 2.6227 8.77915L4.08306 9.12171C4.6695 6.6216 6.62161 4.6695 9.12171 4.08306L8.77916 2.6227Z"
@@ -41,7 +53,7 @@
                 </h1>
 
                 <div class="flex items-center gap-x-2">
-                    <a href="#"
+                    <a href="#" data-aos="fade-right"
                         class="text-white  px-2 py-1 flex items-center gap-x-1 border-white/60 border-[1px] rounded-lg">
                         Source Code
                         <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +65,7 @@
                         </svg>
 
                     </a>
-                    <a href="#"
+                    <a href="#" data-aos="fade-left"
                         class="text-white px-2 py-1 flex items-center gap-x-1 border-white/60 border-[1px] rounded-lg">
                         Figma Files
                         <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,33 +80,113 @@
                 </div>
             </div>
         </section>
-        <div class="w-full flex items-center justify-center">
+        <div class="w-full flex items-center justify-center" data-aos="fade-down">
             <svg class="w-10 mt-4 animate-pulse" width="94" height="47" viewBox="0 0 94 47" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4L47 42L90 4" stroke="#647CFE" stroke-width="7" stroke-linecap="round" />
             </svg>
         </div>
-        <section class="py-4">
-            <h1 class="text-center text-primary text-3xl font-medium">Recently</h1>
-            <div class="flex flex-col gap-y-2 items-center p-4 bg-[#008dd911] rounded-3xl">
+        <h1 class="text-center py-5 text-primary text-3xl font-medium">Recently</h1>
+       <section>
+        <section class="flex flex-col gap-y-5">
+
+            <div class="flex flex-col gap-y-2  p-4 bg-[#008dd911] rounded-3xl">
                 <img src="../assets/Home/file.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
-                <div class="flex items-center py-1 gap-x-20">
+                <div class="flex items-center py-1 justify-between">
                     <div class="flex items-center gap-x-2">
                         <img src="../assets/Home/profile.svg" alt="">
-                    <h1 class="font-light text-lg">By <span class="font-medium">Pouya</span></h1>
+                        <h1 class="font-light text-lg">By <span class="font-medium">Pouya</span></h1>
+                    </div>
+                    <h1 class="bg-[#ce861929] text-[#CE8619] py-3 px-4 font-semibold rounded-full">Ai</h1>
                 </div>
-                    <div class="bg-[#ce861929] p-5 rounded-3xl flex "><svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.984 11.016H3.792L3.12 13H0.256L4.32 1.768H7.488L11.552 13H8.656L7.984 11.016ZM7.28 8.904L5.888 4.792L4.512 8.904H7.28ZM14.1649 3.144C13.6849 3.144 13.2902 3.00533 12.9809 2.728C12.6822 2.44 12.5329 2.088 12.5329 1.672C12.5329 1.24533 12.6822 0.893333 12.9809 0.615999C13.2902 0.327999 13.6849 0.183999 14.1649 0.183999C14.6342 0.183999 15.0182 0.327999 15.3169 0.615999C15.6262 0.893333 15.7809 1.24533 15.7809 1.672C15.7809 2.088 15.6262 2.44 15.3169 2.728C15.0182 3.00533 14.6342 3.144 14.1649 3.144ZM15.5249 4.072V13H12.7889V4.072H15.5249Z" fill="#CE8619"/>
-                        </svg>
-                        </div>
+                <div class="flex items-center justify-between py-2">
+                    <span class="text-xl">30$-50$</span>
+                    <div class="flex relative">
+                        <h1
+                            class="py-2 pr-5 pl-3 bg-primary/20 rounded-full text-primary absolute right-7 font-medium z-10">
+                            3</h1>
+                        <h1 class="py-2 px-4 bg-primary rounded-full text-white">+</h1>
+                    </div>
                 </div>
-              
-               
-        
+            </div>
+            <div class="flex flex-col gap-y-2  p-4 bg-[#ffdfe848] rounded-3xl">
+                <img src="../assets/Home/Group 187.png" alt="">
+                <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
+                <div class="flex items-center py-1 justify-between">
+                    <div class="flex items-center gap-x-2">
+                        <img src="../assets/Home/profile.svg" alt="">
+                        <h1 class="font-light text-lg">By <span class="font-medium">Pouya</span></h1>
+                    </div>
+
+                    <h1 class="bg-[#ce861929] text-[#CE8619] py-3 px-4 font-semibold rounded-full">Ai</h1>
+
+
+                </div>
+                <div class="flex items-center justify-between py-2">
+                    <span class="text-xl">30$-50$</span>
+                    <div class="flex relative">
+                        <h1
+                            class="py-2 pr-5 pl-3 bg-primary/20 rounded-full text-primary absolute right-7 font-medium z-10">
+                            3</h1>
+                        <h1 class="py-2 px-4 bg-primary rounded-full text-white">+</h1>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="flex flex-col gap-y-2  p-4 bg-[#c0562c0b] rounded-3xl">
+                <img src="../assets/Home/HurryPizza - Home (Light) -1.png" alt="">
+                <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
+                <div class="flex items-center py-1 justify-between">
+                    <div class="flex items-center gap-x-2">
+                        <img src="../assets/Home/profile.svg" alt="">
+                        <h1 class="font-light text-lg">By <span class="font-medium">Pouya</span></h1>
+                    </div>
+
+                    <h1 class="bg-[#ce861929] text-[#CE8619] py-3 px-4 font-semibold rounded-full">Ai</h1>
+
+
+                </div>
+                <div class="flex items-center justify-between py-2">
+                    <span class="text-xl">30$-50$</span>
+                    <div class="flex relative">
+                        <h1
+                            class="py-2 pr-5 pl-3 bg-primary/20 rounded-full text-primary absolute right-7 font-medium z-10">
+                            3</h1>
+                        <h1 class="py-2 px-4 bg-primary rounded-full text-white">+</h1>
+                    </div>
+                </div>
             </div>
         </section>
+        <button type="button" class="my-7 border-2 border-primary py-4 rounded-2xl w-full text-xl font-semibold text-primary hover:bg-primary hover:text-white transition-all transform">Show More</button>
+       </section>
     </main>
+    <footer class="bg-gradient-to-l from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 mt-10 container">
+     <div class="flex flex-col gap-y-9">
+        <h1 class="text-white font-semibold text-3xl">DEVMARKET</h1>
+        <ul class="flex flex-col gap-y-3 ">
+            <li class="text-2xl text-white font-semibold">Menu</li>
+            <li class="text-[#ffffffbf]">Home</li>
+            <li class="text-[#ffffffbf]">About</li>
+            <li class="text-[#ffffffbf]">Products</li>
+            <li class="text-[#ffffffbf]">Contact</li>
+        </ul>
+        <div>
+            <h1 class="text-2xl text-white font-semibold">About</h1>
+            <p class="text-[#ffffffbf] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod natus ab impedit nulla minima ex sit dolores iusto rerum architecto dolorem illum, deleniti quam vero. Temporibus aliquam quibusdam quia quasi.</p>
+        </div>
+        <h1 class="text-center text-[#ffffffbf]">All Right Reseved For Pouya | 2023</h1>
+     </div>
+    </footer>
+    <script src="../src/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+    duration: 800,
+})
+
+    </script>
 </body>
 
 </html>

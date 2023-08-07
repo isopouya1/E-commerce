@@ -1,0 +1,3 @@
+body::selection{
+    user-select: none;
+}
