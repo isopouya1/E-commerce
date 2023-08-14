@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="../dist/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Home</title>
 </head>
 
-<body>
-    <main class="container overflow-x-hidden overflow-y-hidden">
+<body id="bod">
+    <main class="container overflow-x-hidden overflow-y-hidden dark:bg-[#252525]">
         <header class="py-5 flex items-center justify-between">
             <img data-aos="fade-right" class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
+           <button onclick="removeClass()">
+            <label data-aos="fade" class="relative inline-flex items-center cursor-pointer lg:hidden -mr-12">
+                <input  type="checkbox" value="" class="sr-only peer" checked>
+                <div class="w-11 h-6 bg-primary rounded-full dark:bg-primary peer-checked:after:translate-x-full dark:after:bg-primary peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-primary after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-primary peer-checked:bg-black/25 dark:peer-checked:bg-white"></div>
+              </label>
+           </button>
             <button class="flex flex-col items-center gap-y-[5px] lg:hidden" id="overlayToggle" data-aos="fade-left">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
@@ -25,20 +32,27 @@
                 <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">About</li>
                 <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">Contact</li>
             </ul>
-             <div data-aos="fade-left" class="bg-[#647efe1a] p-3 rounded-2xl hidden lg:flex">
+           <div class="hidden lg:flex items-center">
+            <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" checked>
+                <div class="w-11 h-6 bg-primary rounded-full dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-primary after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-primary peer-checked:bg-black/25"></div>
+              </label>
+              
+            <div data-aos="fade-left" class="bg-[#647efe1a] p-3 rounded-2xl hidden lg:flex ">
                 <svg  width="34" height="31" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3503 29.6273C24.526 28.6392 27.7824 25.4207 28.735 21.3242C29.5862 17.6641 29.3792 13.8446 28.1372 10.2929L27.9526 9.76525C26.586 5.85726 23.1721 2.97248 19.0196 2.21691L17.8826 2.01002C15.9772 1.66333 14.0228 1.66333 12.1175 2.01002L10.9804 2.21692C6.82795 2.97248 3.41399 5.85725 2.04738 9.76522L1.86286 10.2929C0.62085 13.8445 0.413845 17.6641 1.265 21.3242C2.21763 25.4207 5.47398 28.6392 9.64971 29.6273C13.1591 30.4576 16.8409 30.4576 20.3503 29.6273ZM11.2461 8.40012C11.4605 7.90098 11.2205 7.3264 10.71 7.11676C10.1996 6.90712 9.612 7.1418 9.39761 7.64095L9.06145 8.4236C8.43992 9.87066 8.28369 11.4685 8.61356 13.0045C9.13705 15.442 11.1216 17.3247 13.6291 17.7626L13.8145 17.7949C14.5986 17.9319 15.4014 17.9319 16.1856 17.7949L16.3709 17.7626C18.8785 17.3247 20.863 15.4421 21.3865 13.0045C21.7164 11.4685 21.5601 9.87066 20.9386 8.4236L20.6024 7.64095C20.388 7.1418 19.8004 6.90712 19.29 7.11675C18.7795 7.32639 18.5395 7.90097 18.7539 8.40012L19.0901 9.18277C19.5539 10.2627 19.6705 11.4552 19.4244 12.6016C19.0689 14.2568 17.7213 15.5353 16.0185 15.8326L15.8331 15.865C15.2821 15.9612 14.718 15.9612 14.1669 15.865L13.9815 15.8326C12.2788 15.5353 10.9312 14.2568 10.5757 12.6016C10.3295 11.4552 10.4461 10.2627 10.91 9.18277L11.2461 8.40012Z" fill="#8593FF"/>
                     <circle cx="28.3" cy="6.50005" r="5.25" fill="#01CBED" stroke="#F8F6F6" stroke-width="0.9"/>
                     </svg>    
              </div>                                
-
+           </div>
+         
         </header>
         <section class="flex flex-col items-center bg-gradient-to-l from-[#5B6FFF] to-primary w-full py-7 rounded-3xl lg:flex-row-reverse lg:justify-between lg:px-9 lg:py-0 lg:rounded-[50px]">
             <img class="lg:w-[600px]" src="../assets/Home/hero.png" alt="" data-aos="fade">
             <div class="px-6 flex flex-col items-center gap-y-4 lg:items-start lg:gap-y-7 ">
                 <h1 class="text-white font-bold text-4xl text-center lg:text-start lg:text-6xl" data-aos="fade-up">All You Need
                     For <span class="font-light">Designing!</span></h1>
-                <input data-aos="fade-down" type="search" placeholder="Search in Products" class="focus:outline-none py-3 px-3 rounded-2xl lg:w-[370px]">
+                <input data-aos="fade-down" type="search" placeholder="Search in Products" class="focus:outline-none py-3 px-3 rounded-2xl lg:w-[370px] dark:bg-[#252525]">
             <div class="lg:flex-row flex flex-col items-center gap-y-3 lg:gap-x-2">
                 <h1 class="flex items-center text-white gap-x-1 text-xl" data-aos="fade">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +109,7 @@
        <section class="flex flex-col items-center lg:mt-3">
         <section class="flex flex-col gap-y-5 lg:flex-row gap-x-5">
 
-            <div  data-aos="zoom-out-up" data-aos-delay="200" class="flex flex-col gap-y-2  p-4 bg-[#008dd911] rounded-3xl">
+            <div  data-aos="zoom-out-up" data-aos-delay="200" class="flex flex-col gap-y-2  p-4 bg-[#008dd911] rounded-3xl dark:bg-white">
                 <img src="../assets/Home/file.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
                 <div class="flex items-center py-1 justify-between">
@@ -115,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div data-aos="zoom-out-up" data-aos-delay="400"  class="flex flex-col gap-y-2  p-4 bg-[#ffdfe848] rounded-3xl">
+            <div data-aos="zoom-out-up" data-aos-delay="400"  class="flex flex-col gap-y-2  p-4 bg-[#ffdfe848] rounded-3xl dark:bg-white">
                 <img src="../assets/Home/Group 187.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
                 <div class="flex items-center py-1 justify-between">
@@ -140,7 +154,7 @@
 
 
             </div>
-            <div data-aos="zoom-out-up" data-aos-delay="600"  class="flex flex-col gap-y-2  p-4 bg-[#c0562c0b] rounded-3xl">
+            <div data-aos="zoom-out-up" data-aos-delay="600"  class="flex flex-col gap-y-2 dark:bg-white p-4 bg-[#c0562c0b] rounded-3xl">
                 <img src="../assets/Home/HurryPizza - Home (Light) -1.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
                 <div class="flex items-center py-1 justify-between">
@@ -168,8 +182,8 @@
        </section>
        <section>
         <h1 data-aos="fade-down" class="text-center text-primary text-3xl py-10 font-medium ">Our <i>Blog</i></h1>
-        <section class="flex flex-col gap-y-9 items-center py-5">
-            <div data-aos="fade-left" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105">
+        <section class="flex flex-col gap-y-9 items-center py-5 lg:flex-row lg:gap-x-7">
+            <div data-aos="fade-left" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105 dark:border-primary">
                 <img src="../assets/Home/blog.png" alt="">
                 <p class="text-center text-primary text-lg font-medium">
                     Not only the coolest <br> but here’s the crispiest <br> part of your day
@@ -180,7 +194,7 @@
                     </svg>      
                </div>              
             </div>
-            <div data-aos="fade-right" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105">
+            <div data-aos="fade-right" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105 dark:border-primary" >
                 <img src="../assets/Home/blog.png" alt="">
                 <p class="text-center text-primary text-lg font-medium">
                     Not only the coolest <br> but here’s the crispiest <br> part of your day
@@ -191,7 +205,7 @@
                     </svg>      
                </div>              
             </div>
-            <div data-aos="fade-left" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105">
+            <div data-aos="fade-left" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105 dark:border-primary">
                 <img src="../assets/Home/blog.png" alt="">
                 <p class="text-center text-primary text-lg font-medium">
                     Not only the coolest <br> but here’s the crispiest <br> part of your day
@@ -205,7 +219,7 @@
         </section>
        </section>
     </main>
-    <footer class="bg-gradient-to-l  from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 mt-10 container relative">
+    <footer class="bg-gradient-to-l  from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 container relative">
      <div class="flex flex-col gap-y-9 z-40 lg:flex-row lg:justify-between">
         <div>
             <h1 data-aos="fade-up" class="text-white font-semibold text-3xl">DEVMARKET</h1>
@@ -237,10 +251,16 @@
 
     <script src="../src/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         AOS.init({
     duration: 800,
 })
+function removeClass()
+    {
+        document.getElementById('bod').classList.add('dark');
+
+    }
     </script>
 </body>
 
