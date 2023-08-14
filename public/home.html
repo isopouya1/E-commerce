@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scable=none">
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="../dist/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -11,32 +11,35 @@
 </head>
 
 <body>
-    <main class="container overflow-x-hidden">
+    <main class="container overflow-x-hidden overflow-y-hidden">
         <header class="py-5 flex items-center justify-between">
-            <img class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
-            <button class="flex flex-col items-center gap-y-[5px]" id="overlayToggle" data-aos="fade-left">
+            <img data-aos="fade-right" class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
+            <button class="flex flex-col items-center gap-y-[5px] lg:hidden" id="overlayToggle" data-aos="fade-left">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
             </button>
+            <ul class="=items-center gap-x-9 hidden lg:flex">
+                <li class="text-primary font-medium">Home</li>
+                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">Products</li>
+                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">About</li>
+                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">Contact</li>
+            </ul>
+             <div data-aos="fade-left" class="bg-[#647efe1a] p-3 rounded-2xl hidden lg:flex">
+                <svg  width="34" height="31" viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3503 29.6273C24.526 28.6392 27.7824 25.4207 28.735 21.3242C29.5862 17.6641 29.3792 13.8446 28.1372 10.2929L27.9526 9.76525C26.586 5.85726 23.1721 2.97248 19.0196 2.21691L17.8826 2.01002C15.9772 1.66333 14.0228 1.66333 12.1175 2.01002L10.9804 2.21692C6.82795 2.97248 3.41399 5.85725 2.04738 9.76522L1.86286 10.2929C0.62085 13.8445 0.413845 17.6641 1.265 21.3242C2.21763 25.4207 5.47398 28.6392 9.64971 29.6273C13.1591 30.4576 16.8409 30.4576 20.3503 29.6273ZM11.2461 8.40012C11.4605 7.90098 11.2205 7.3264 10.71 7.11676C10.1996 6.90712 9.612 7.1418 9.39761 7.64095L9.06145 8.4236C8.43992 9.87066 8.28369 11.4685 8.61356 13.0045C9.13705 15.442 11.1216 17.3247 13.6291 17.7626L13.8145 17.7949C14.5986 17.9319 15.4014 17.9319 16.1856 17.7949L16.3709 17.7626C18.8785 17.3247 20.863 15.4421 21.3865 13.0045C21.7164 11.4685 21.5601 9.87066 20.9386 8.4236L20.6024 7.64095C20.388 7.1418 19.8004 6.90712 19.29 7.11675C18.7795 7.32639 18.5395 7.90097 18.7539 8.40012L19.0901 9.18277C19.5539 10.2627 19.6705 11.4552 19.4244 12.6016C19.0689 14.2568 17.7213 15.5353 16.0185 15.8326L15.8331 15.865C15.2821 15.9612 14.718 15.9612 14.1669 15.865L13.9815 15.8326C12.2788 15.5353 10.9312 14.2568 10.5757 12.6016C10.3295 11.4552 10.4461 10.2627 10.91 9.18277L11.2461 8.40012Z" fill="#8593FF"/>
+                    <circle cx="28.3" cy="6.50005" r="5.25" fill="#01CBED" stroke="#F8F6F6" stroke-width="0.9"/>
+                    </svg>    
+             </div>                                
 
-            <div id="overlayMenu"
-            class="container py-8 fade transition-all w-full hidden flex-col right-0 h-screen lg:hidden fixed top-0 z-50 bg-white  shadow-2xl"
-            >
-            <button class="flex flex-col items-center gap-y-[5px]" id="closeOverlayToggle">
-                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
-                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
-                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
-            </button>
-
-            </div>
         </header>
-        <section class="flex flex-col items-center bg-gradient-to-l from-[#5B6FFF] to-primary w-full py-7 rounded-3xl">
-            <img src="../assets/Home/hero.png" alt="" data-aos="fade">
-            <div class="px-6 flex flex-col items-center gap-y-4">
-                <h1 class="text-white font-bold text-4xl text-center" data-aos="fade-up">All You Need
+        <section class="flex flex-col items-center bg-gradient-to-l from-[#5B6FFF] to-primary w-full py-7 rounded-3xl lg:flex-row-reverse lg:justify-between lg:px-9 lg:py-0 lg:rounded-[50px]">
+            <img class="lg:w-[600px]" src="../assets/Home/hero.png" alt="" data-aos="fade">
+            <div class="px-6 flex flex-col items-center gap-y-4 lg:items-start lg:gap-y-7 ">
+                <h1 class="text-white font-bold text-4xl text-center lg:text-start lg:text-6xl" data-aos="fade-up">All You Need
                     For <span class="font-light">Designing!</span></h1>
-                <input data-aos="fade-down" type="search" placeholder="Search in Products" class="focus:outline-none py-3 px-3 rounded-2xl">
+                <input data-aos="fade-down" type="search" placeholder="Search in Products" class="focus:outline-none py-3 px-3 rounded-2xl lg:w-[370px]">
+            <div class="lg:flex-row flex flex-col items-center gap-y-3 lg:gap-x-2">
                 <h1 class="flex items-center text-white gap-x-1 text-xl" data-aos="fade">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -49,7 +52,7 @@
                             d="M7.85741 12.2228C7.54952 12.4998 7.52457 12.9741 7.80166 13.2819C8.07875 13.5898 8.55297 13.6148 8.86085 13.3377L7.85741 12.2228ZM10.0656 11.2444L10.5674 11.8018V11.8018L10.0656 11.2444ZM11.6271 11.4406L12.2511 11.0245L12.2511 11.0245L11.6271 11.4406ZM12.3731 12.5595L11.749 12.9755L11.749 12.9755L12.3731 12.5595ZM13.9345 12.7557L14.4363 13.3131L13.9345 12.7557ZM16.1428 11.7773C16.4506 11.5002 16.4756 11.026 16.1985 10.7181C15.9214 10.4102 15.4472 10.3853 15.1393 10.6623L16.1428 11.7773ZM13.0746 13.2875L12.9812 14.0317H12.9812L13.0746 13.2875ZM10.9255 10.7125L10.832 11.4567L10.832 11.4567L10.9255 10.7125ZM8.86085 13.3377L10.5674 11.8018L9.56392 10.6869L7.85741 12.2228L8.86085 13.3377ZM11.0031 11.8566L11.749 12.9755L12.9971 12.1435L12.2511 11.0245L11.0031 11.8566ZM14.4363 13.3131L16.1428 11.7773L15.1393 10.6623L13.4328 12.1982L14.4363 13.3131ZM11.749 12.9755C11.8916 13.1894 12.0414 13.4173 12.192 13.5861C12.3567 13.7708 12.6073 13.9847 12.9812 14.0317L13.1681 12.5434C13.2271 12.5508 13.2771 12.5721 13.3101 12.5929C13.3361 12.6094 13.3373 12.6167 13.3115 12.5878C13.2857 12.5589 13.2488 12.5118 13.1934 12.4333C13.1383 12.3552 13.0763 12.2623 12.9971 12.1435L11.749 12.9755ZM13.4328 12.1982C13.3267 12.2937 13.2436 12.3684 13.1709 12.4305C13.0978 12.4929 13.0504 12.5293 13.0182 12.551C12.9862 12.5726 12.9891 12.5658 13.0184 12.5563C13.0554 12.5442 13.1092 12.536 13.1681 12.5434L12.9812 14.0317C13.355 14.0786 13.6508 13.9334 13.856 13.7952C14.0437 13.6689 14.2452 13.4851 14.4363 13.3131L13.4328 12.1982ZM10.5674 11.8018C10.6735 11.7063 10.7566 11.6316 10.8292 11.5696C10.9024 11.5072 10.9498 11.4707 10.9819 11.4491C11.014 11.4275 11.0111 11.4343 10.9818 11.4438C10.9447 11.4558 10.891 11.4641 10.832 11.4567L11.019 9.96837C10.6452 9.92141 10.3494 10.0666 10.1442 10.2048C9.9565 10.3312 9.75499 10.5149 9.56392 10.6869L10.5674 11.8018ZM12.2511 11.0245C12.1086 10.8106 11.9588 10.5828 11.8082 10.4139C11.6435 10.2292 11.3928 10.0153 11.019 9.96837L10.832 11.4567C10.7731 11.4493 10.723 11.428 10.6901 11.4071C10.664 11.3907 10.6629 11.3834 10.6886 11.4122C10.7144 11.4411 10.7514 11.4882 10.8068 11.5668C10.8619 11.6449 10.9239 11.7378 11.0031 11.8566L12.2511 11.0245Z"
                             fill="white" fill-opacity="0.44" />
                     </svg>
-                    Trending
+                    Trending:
                 </h1>
 
                 <div class="flex items-center gap-x-2">
@@ -79,18 +82,20 @@
                     </a>
                 </div>
             </div>
-        </section>
+     
+            </div>  
+            </section>
         <div class="w-full flex items-center justify-center" data-aos="fade-down">
-            <svg class="w-10 mt-4 animate-pulse" width="94" height="47" viewBox="0 0 94 47" fill="none"
+            <svg class="w-10 mt-4 animate-pulse lg:hidden" width="94" height="47" viewBox="0 0 94 47" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4L47 42L90 4" stroke="#647CFE" stroke-width="7" stroke-linecap="round" />
             </svg>
         </div>
-        <h1 class="text-center py-5 text-primary text-3xl font-medium">Recently</h1>
-       <section>
-        <section class="flex flex-col gap-y-5">
+        <h1 data-aos="zoom-out" class="text-center py-5 text-primary text-3xl font-medium lg:mt-10">Recently</h1>
+       <section class="flex flex-col items-center lg:mt-3">
+        <section class="flex flex-col gap-y-5 lg:flex-row gap-x-5">
 
-            <div class="flex flex-col gap-y-2  p-4 bg-[#008dd911] rounded-3xl">
+            <div  data-aos="zoom-out-up" data-aos-delay="200" class="flex flex-col gap-y-2  p-4 bg-[#008dd911] rounded-3xl">
                 <img src="../assets/Home/file.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
                 <div class="flex items-center py-1 justify-between">
@@ -110,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col gap-y-2  p-4 bg-[#ffdfe848] rounded-3xl">
+            <div data-aos="zoom-out-up" data-aos-delay="400"  class="flex flex-col gap-y-2  p-4 bg-[#ffdfe848] rounded-3xl">
                 <img src="../assets/Home/Group 187.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
                 <div class="flex items-center py-1 justify-between">
@@ -135,7 +140,7 @@
 
 
             </div>
-            <div class="flex flex-col gap-y-2  p-4 bg-[#c0562c0b] rounded-3xl">
+            <div data-aos="zoom-out-up" data-aos-delay="600"  class="flex flex-col gap-y-2  p-4 bg-[#c0562c0b] rounded-3xl">
                 <img src="../assets/Home/HurryPizza - Home (Light) -1.png" alt="">
                 <h1 class="text-black text-2xl font-medium text-center">Hurry Pizza Ui Kit</h1>
                 <div class="flex items-center py-1 justify-between">
@@ -159,33 +164,83 @@
                 </div>
             </div>
         </section>
-        <button type="button" class="my-7 border-2 border-primary py-4 rounded-2xl w-full text-xl font-semibold text-primary hover:bg-primary hover:text-white transition-all transform">Show More</button>
+    <button data-aos="fade" type="button" class="my-7 border-2 border-primary py-4 rounded-2xl w-full text-xl font-semibold text-primary hover:bg-primary hover:text-white transition-all transform lg:w-52">Show More</button>
+       </section>
+       <section>
+        <h1 data-aos="fade-down" class="text-center text-primary text-3xl py-10 font-medium ">Our <i>Blog</i></h1>
+        <section class="flex flex-col gap-y-9 items-center py-5">
+            <div data-aos="fade-left" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105">
+                <img src="../assets/Home/blog.png" alt="">
+                <p class="text-center text-primary text-lg font-medium">
+                    Not only the coolest <br> but here’s the crispiest <br> part of your day
+                </p>
+               <div class="border-[1.5px] border-primary py-2 px-3 rounded-full " >
+                <svg class=""  width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.47998 16.0599L8.51998 8.99994L1.47998 1.93994" stroke="#8593FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>      
+               </div>              
+            </div>
+            <div data-aos="fade-right" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105">
+                <img src="../assets/Home/blog.png" alt="">
+                <p class="text-center text-primary text-lg font-medium">
+                    Not only the coolest <br> but here’s the crispiest <br> part of your day
+                </p>
+               <div class="border-[1.5px] border-primary py-2 px-3 rounded-full" >
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.47998 16.0599L8.51998 8.99994L1.47998 1.93994" stroke="#8593FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>      
+               </div>              
+            </div>
+            <div data-aos="fade-left" class="border-[1.5px] flex flex-col items-center gap-y-5 border-primary/30 rounded-full p-8 hover:border-b-8 hover:border-primary transition-all duration-500 hover:scale-105">
+                <img src="../assets/Home/blog.png" alt="">
+                <p class="text-center text-primary text-lg font-medium">
+                    Not only the coolest <br> but here’s the crispiest <br> part of your day
+                </p>
+               <div class="border-[1.5px] border-primary py-2 px-3 rounded-full" >
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.47998 16.0599L8.51998 8.99994L1.47998 1.93994" stroke="#8593FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>      
+               </div>              
+            </div>
+        </section>
        </section>
     </main>
-    <footer class="bg-gradient-to-l from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 mt-10 container">
-     <div class="flex flex-col gap-y-9">
-        <h1 class="text-white font-semibold text-3xl">DEVMARKET</h1>
-        <ul class="flex flex-col gap-y-3 ">
-            <li class="text-2xl text-white font-semibold">Menu</li>
-            <li class="text-[#ffffffbf]">Home</li>
-            <li class="text-[#ffffffbf]">About</li>
-            <li class="text-[#ffffffbf]">Products</li>
-            <li class="text-[#ffffffbf]">Contact</li>
+    <footer class="bg-gradient-to-l  from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 mt-10 container relative">
+     <div class="flex flex-col gap-y-9 z-40 lg:flex-row lg:justify-between">
+        <div>
+            <h1 data-aos="fade-up" class="text-white font-semibold text-3xl">DEVMARKET</h1>
+            <div class="flex gap-x-4 mt-5">
+                <a href="https://enamad.ir/">
+                <img data-aos="fade" class="w-24 h-24" src="../assets/Home/namad.png" alt=""></a>
+                <img data-aos="fade" class="w-24 h-24 rounded-xl"  src="../assets/Home/namad.jpg" alt="">
+            </div>
+        </div>
+        <ul class="flex flex-col gap-y-1">
+            <li data-aos="fade" class="text-2xl text-white font-semibold">Menu</li>
+    
+<div class="lg:flex  gap-x-8">
+    <li data-aos="fade-up" class="text-[#ffffffbf]">Home</li>
+    <li data-aos="fade-up" class="text-[#ffffffbf]">Products</li>
+</div>
+<div  class="lg:flex gap-y-3 gap-x-8">
+    <li data-aos="fade-up" class="text-[#ffffffbf]">About</li>
+    <li data-aos="fade-up" class="text-[#ffffffbf]">Contact</li>
+</div>
         </ul>
         <div>
-            <h1 class="text-2xl text-white font-semibold">About</h1>
-            <p class="text-[#ffffffbf] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod natus ab impedit nulla minima ex sit dolores iusto rerum architecto dolorem illum, deleniti quam vero. Temporibus aliquam quibusdam quia quasi.</p>
+            <h1 data-aos="fade" class="text-2xl text-white font-semibold">About</h1>
+            <p data-aos="fade" class="text-[#ffffffbf] text-justify lg:w-52">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod natus ab impedit nulla minima ex sit dolores iusto rerum architecto dolorem illum, deleniti quam vero. Temporibus aliquam quibusdam quia quasi.</p>
         </div>
-        <h1 class="text-center text-[#ffffffbf]">All Right Reseved For Pouya | 2023</h1>
      </div>
+     <h1 class="text-center text-[#ffffffbf] pt-5">All Right Reseved For Pouya | 2023</h1>
     </footer>
+
     <script src="../src/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
     duration: 800,
 })
-
     </script>
 </body>
 
