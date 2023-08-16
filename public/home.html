@@ -21,11 +21,30 @@
                 <div class="w-11 h-6 bg-primary rounded-full dark:bg-white peer-checked:after:translate-x-full dark:after:bg-primary peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-primary after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-primary peer-checked:bg-black/25 dark:peer-checked:bg-white"></div>
               </label>
            </button>
-            <button class="flex flex-col items-center gap-y-[5px] lg:hidden" id="overlayToggle" data-aos="fade-left">
+            <buttonc class="flex flex-col items-center gap-y-[5px] lg:hidden" id="overlayToggle" data-aos="fade-left">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+            </buttonc>
+            <div id="overlayMenu"
+            class="flex min-w-full flex-col h-screen lg:hidden fixed top-0 right-[-100%] z-50 bg-[#fff] backdrop-blur-md shadow-4xl fade duration-500 transition-all dark:bg-[#252525]">
+         <div class="flex items-center">
+            <img class="absolute top-7 left-8 w-44" src="../assets/Home/logo.svg" alt="">
+            <button class="absolute top-8 right-8 "type="button" id="closeOverlayToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 stroke-primary lg:hidden"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
+         </div>
+            <ul class=" text-primary text-center pt-48 gap-y-7 text-lg items-center flex-col flex font-normal cursor-pointer">   
+               <a href="#"> <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium ">Home</li>       </a>
+               <a href="#"> <li class="hover:text-primary   duration-1000 transform transition-all hover:font-medium">Blog</li> </a>
+               <a href="#"> <li class="hover:text-primary duration-1000  transform transition-all hover:font-medium">Products</li></a> 
+                <a href="#"> <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium">Shopping Card</li></a> 
+                <a href="login.html"> <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium text-white bg-primary rounded-2xl py-5 w-44">Login</li></a> 
+            </ul>
+        </div>
             <ul class="=items-center gap-x-9 hidden lg:flex">
                 <li class="text-primary font-medium">Home</li>
                 <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">Products</li>
@@ -268,6 +287,17 @@ function remove()
         document.getElementById('bod').classList.remove('dark');
 
     }
+    document.querySelector("#overlayToggle").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#overlayMenu").classList.toggle("right-[-100%]");
+  document.querySelector("#overlayMenu").classList.toggle("right-0");
+});
+
+document.querySelector("#closeOverlayToggle").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#overlayMenu").classList.remove("right-0");
+  document.querySelector("#overlayMenu").classList.add("right-[-100%]");
+});
     </script>
 </body>
 
