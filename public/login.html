@@ -11,8 +11,8 @@
     <title>Home</title>
 </head>
 
-<body id="bod">
-    <main class="container  h-screen overflow-x-hidden overflow-y-hidden bg-[#EAEDFF] ">
+<body class="bg-[#EAEDFF]" id="bod">
+    <main class="container  h-screen overflow-x-hidden overflow-y-hidden ">
         <header class="py-5 flex items-center justify-between">
             <img data-aos="fade-right" class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
    
@@ -36,6 +36,8 @@
              </div>                                
          
         </header>
+      <section class="lg:flex items-center gap-x-80">
+
         <section class="w-full mt-20 flex flex-col items-center justify-center relative">
             <div class="bg-white py-6 px-8 rounded-3xl z-10 shadow-sm">
                 <h1 class="text-[#7B88E2] font-semibold text-2xl">LOGIN</h1>
@@ -65,13 +67,15 @@
                         <input class="w-full focus:outline-none text-primary font-medium" type="password" name="" id="">
                     </div>
                 </div>
-                <button class="hover:bg-white bg-primary text-white border-[1.5px] border-primary py-4 w-3/5 hover:text-primary font-medium rounded-xl duration-500 transition-all" type="button">Login</button>
+                <button class="hover:bg-white bg-primary text-white border-[1.5px] border-primary py-4 w-full hover:text-primary font-medium rounded-xl duration-500 transition-all" type="button">Login</button>
               </div>
             </div>
             <img class="absolute w-64 top-[75px]" src="../assets/login/backgruond-login.png" alt="">
         </section>
+        <img class="hidden lg:flex w-96" src="../assets/login/man.png" alt="">
+      </section>
     </main>
-    <footer class="bg-gradient-to-l -mt-32 from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 container">
+    <footer class="bg-gradient-to-l  from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 container lg:mt-11">
         <div class="flex flex-col gap-y-9 z-40 lg:flex-row lg:justify-between">
            <div>
                <h1 data-aos="fade-up" class="text-white font-semibold text-3xl">DEVMARKET</h1>
