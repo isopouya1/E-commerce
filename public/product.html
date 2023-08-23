@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>Product</title>
+</head>
+
+<body class="bg-[#EAEDFF]">
+    <main class="container">
+        <header class="py-5 flex items-center justify-between">
+            <img data-aos="fade-right" class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
+            <button class="flex flex-col items-center gap-y-[5px] lg:hidden" id="overlayToggle" data-aos="fade-left">
+                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+                <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
+            </button>
+            <div id="overlayMenu"
+                class="flex min-w-full flex-col h-screen lg:hidden fixed top-0 right-[-100%] z-50 bg-[#fff] backdrop-blur-md shadow-4xl fade duration-500 transition-all dark:bg-[#252525]">
+                <div class="flex items-center">
+                    <img class="absolute top-7 left-8 w-44" src="../assets/Home/logo.svg" alt="">
+                    <button class="absolute top-8 right-8 " type="button" id="closeOverlayToggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 stroke-primary lg:hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <ul
+                    class=" text-primary text-center pt-48 gap-y-7 text-lg items-center flex-col flex font-normal cursor-pointer">
+                    <a href="#">
+                        <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium ">Home
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="hover:text-primary   duration-1000 transform transition-all hover:font-medium">Blog
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="hover:text-primary duration-1000  transform transition-all hover:font-medium">
+                            Products</li>
+                    </a>
+                    <a href="#">
+                        <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium">Shopping
+                            Card</li>
+                    </a>
+                    <a href="login.html">
+                        <li
+                            class="hover:text-primary duration-1000 transform transition-all hover:font-medium text-white bg-primary rounded-2xl py-5 w-44">
+                            Login</li>
+                    </a>
+                </ul>
+            </div>
+            <ul class="=items-center gap-x-9 hidden lg:flex">
+                <li class="text-primary font-medium">Home</li>
+                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">
+                    Products</li>
+                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">About
+                </li>
+                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">
+                    Contact</li>
+            </ul>
+            <div class="hidden lg:flex items-center">
+
+                <a href="login.html">
+                    <div data-aos="fade-left" class="bg-[#647efe1a] p-3 rounded-2xl hidden lg:flex ">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 12.75C8.83 12.75 6.25 10.17 6.25 7C6.25 3.83 8.83 1.25 12 1.25C15.17 1.25 17.75 3.83 17.75 7C17.75 10.17 15.17 12.75 12 12.75ZM12 2.75C9.66 2.75 7.75 4.66 7.75 7C7.75 9.34 9.66 11.25 12 11.25C14.34 11.25 16.25 9.34 16.25 7C16.25 4.66 14.34 2.75 12 2.75Z"
+                                fill="#8593FF" />
+                            <path
+                                d="M20.5901 22.75C20.1801 22.75 19.8401 22.41 19.8401 22C19.8401 18.55 16.3202 15.75 12.0002 15.75C7.68015 15.75 4.16016 18.55 4.16016 22C4.16016 22.41 3.82016 22.75 3.41016 22.75C3.00016 22.75 2.66016 22.41 2.66016 22C2.66016 17.73 6.85015 14.25 12.0002 14.25C17.1502 14.25 21.3401 17.73 21.3401 22C21.3401 22.41 21.0001 22.75 20.5901 22.75Z"
+                                fill="#8593FF" />
+                        </svg>
+
+                    </div>
+                </a>
+            </div>
+
+        </header>
+        <section class="bg-white h-auto w-full rounded-3xl p-3  shadow-lg lg:flex justify-evenly items-center">
+            <div>
+                <img class="w-96" src="../assets/Home/HurryPizza - Home (Light) -1.png" alt="">
+
+            </div>
+            <div>
+                <div class="flex flex-col gap-y-3 mt-4">
+
+                    <h1 class="text-3xl font-semibold text-black text-center">Harry pizza ui Kit</h1>
+                    <p class="text-sm text-black/30 text-center">Apple iPhone 13 Pro Max CH/A 6/256GB Dual </p>
+
+                </div>
+                <div class="mt-8 flex items-center gap-x-2">
+                    <span class="text-black text-xl font-medium">Colors:</span>
+                    <div class="flex items-center gap-x-2">
+                        <div class="w-6 h-6 bg-primary rounded-full"></div>
+                        <div class="w-6 h-6 bg-black rounded-full"></div>
+                        <div class="w-6 h-6 bg-[#7a7a7a] rounded-full"></div>
+                    </div>
+                </div>
+                <hr class="my-8 text-black/20">
+                <div class="flex flex-col gap-y-3">
+                    <h1 class="text-black text-xl font-medium">Orginal option</h1>
+                    <div class="w-full h-auto p-4 border-black/20 border-[1px] rounded-xl">
+                        <ul class="flex flex-col ">
+                            <li class="text-sm text-black/40"><span
+                                    class="font-semibold text-lg text-black">Colors:</span> Optional</li>
+                            <hr class="my-4 text-black/20">
+                            <li class="text-sm text-black/40"><span
+                                    class="font-semibold text-lg text-black">Colors:</span> Optional</li>
+                            <hr class="my-4 text-black/20">
+                            <li class="text-sm text-black/40"><span
+                                    class="font-semibold text-lg text-black">Colors:</span> Optional</li>
+                            <hr class="my-4 text-black/20">
+                            <li class="text-sm text-black/40"><span
+                                    class="font-semibold text-lg text-black">Colors:</span> Optional</li>
+                            <hr class="my-4 text-black/20">
+                            <li class="text-sm text-black/40"><span
+                                    class="font-semibold text-lg text-black">Colors:</span> Optional</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button"
+                    class="w-full bg-primary py-4 rounded-xl text-xl font-medium text-white mt-5 shadow-xl">Buy</button>
+            </div>
+        </section>
+        <section class="mt-10">
+            <h1 class="text-xl font-semibold text-black ">Recently Products:</h1>
+            <div  class="flex overflow-x-scroll items-center gap-x-4 py-3">
+                <img class="bg-white p-4 rounded-3xl w-64 h-52" src="../assets/Home/HurryPizza - Home (Light) -1.png"
+                    alt="">
+                <img class="bg-white p-4 rounded-3xl w-64 h-52" src="../assets/Home/HurryPizza - Home (Light) -1.png"
+                    alt=""> <img class="bg-white p-4 rounded-3xl w-64 h-52"
+                    src="../assets/Home/HurryPizza - Home (Light) -1.png" alt=""> <img
+                    class="bg-white p-4 rounded-3xl w-64 h-52" src="../assets/Home/HurryPizza - Home (Light) -1.png"
+                    alt=""> <img class="bg-white p-4 rounded-3xl w-64 h-52"
+                    src="../assets/Home/HurryPizza - Home (Light) -1.png" alt=""> <img
+                    class="bg-white p-4 rounded-3xl w-64 h-52" src="../assets/Home/HurryPizza - Home (Light) -1.png"
+                    alt=""> <img class="bg-white p-4 rounded-3xl w-64 h-52"
+                    src="../assets/Home/HurryPizza - Home (Light) -1.png" alt="">
+        </section>
+    </main>
+    <footer class="bg-gradient-to-l  from-[#5B6FFF] to-primary w-full pb-2 h-auto pt-10 container mt-10">
+        <div class="flex flex-col gap-y-9 z-40 lg:flex-row lg:justify-between">
+            <div>
+                <h1 data-aos="fade-up" class="text-white font-semibold text-3xl">DEVMARKET</h1>
+                <div class="flex gap-x-4 mt-5">
+                    <a href="https://enamad.ir/">
+                        <img data-aos="fade" class="w-24 h-24" src="../assets/Home/namad.png" alt=""></a>
+                    <img data-aos="fade" class="w-24 h-24 rounded-xl" src="../assets/Home/namad.jpg" alt="">
+                </div>
+            </div>
+            <ul class="flex flex-col gap-y-1">
+                <li data-aos="fade" class="text-2xl text-white font-semibold">Menu</li>
+
+                <div class="lg:flex  gap-x-8">
+                    <li data-aos="fade-up" class="text-[#ffffffbf]">Home</li>
+                    <li data-aos="fade-up" class="text-[#ffffffbf]">Products</li>
+                </div>
+                <div class="lg:flex gap-y-3 gap-x-8">
+                    <li data-aos="fade-up" class="text-[#ffffffbf]">About</li>
+                    <li data-aos="fade-up" class="text-[#ffffffbf]">Contact</li>
+                </div>
+            </ul>
+            <div>
+                <h1 data-aos="fade" class="text-2xl text-white font-semibold">About</h1>
+                <p data-aos="fade" class="text-[#ffffffbf] text-justify lg:w-52">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Quod natus ab impedit nulla minima ex sit dolores iusto rerum architecto dolorem
+                    illum, deleniti quam vero. Temporibus aliquam quibusdam quia quasi.</p>
+            </div>
+        </div>
+        <h1 class="text-center text-[#ffffffbf] pt-5">All Right Reseved For Pouya | 2023</h1>
+    </footer>
+    <script src="../src/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        })
+        function removeClass() {
+            document.getElementById('bod').classList.add('dark');
+
+        }
+
+        function remove() {
+            document.getElementById('bod').classList.remove('dark');
+
+        }
+        document.querySelector("#overlayToggle").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#overlayMenu").classList.toggle("right-[-100%]");
+            document.querySelector("#overlayMenu").classList.toggle("right-0");
+        });
+
+        document.querySelector("#closeOverlayToggle").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#overlayMenu").classList.remove("right-0");
+            document.querySelector("#overlayMenu").classList.add("right-[-100%]");
+        });
+    </script>
+</body>
+
+</html>
